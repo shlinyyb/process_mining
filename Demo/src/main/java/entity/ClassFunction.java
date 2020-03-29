@@ -1,6 +1,7 @@
 package entity;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
@@ -9,7 +10,8 @@ import java.util.List;
  * @Author: Kobe
  * @Date: 2020/3/20 13:03
  */
-@Data
+@Getter
+@Setter
 public class ClassFunction {
     String authority;
     String returnType;

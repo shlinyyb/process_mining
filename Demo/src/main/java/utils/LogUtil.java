@@ -25,10 +25,6 @@ public class LogUtil {
                     logDemoStrings.add(lineTxt);
                 }
             }
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

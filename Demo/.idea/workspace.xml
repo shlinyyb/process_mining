@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassAttribute.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,11 +31,15 @@
     <expand />
     <select />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Demo" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Arquillian JUnit Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,7 +47,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1ZNTeoCIlDADASBV23qy8ZnYEoJ" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -47,7 +57,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SCUT-Mall/code/scutmall" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -106,7 +119,13 @@
       <workItem from="1584698167632" duration="2487000" />
       <workItem from="1584798630969" duration="2737000" />
       <workItem from="1584945135450" duration="2514000" />
-      <workItem from="1584947705286" duration="300000" />
+      <workItem from="1584947705286" duration="2360000" />
+      <workItem from="1585017815991" duration="1804000" />
+      <workItem from="1585020681969" duration="4429000" />
+      <workItem from="1585103231757" duration="5707000" />
+      <workItem from="1585210504427" duration="1130000" />
+      <workItem from="1585277227920" duration="10887000" />
+      <workItem from="1585468608197" duration="3678000" />
     </task>
     <task id="LOCAL-00001" summary="工具类">
       <created>1584801317309</created>
@@ -115,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584801317309</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="lombok">
+      <created>1584948100755</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584948100755</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,6 +162,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="工具类" />
-    <option name="LAST_COMMIT_MESSAGE" value="工具类" />
+    <MESSAGE value="lombok" />
+    <option name="LAST_COMMIT_MESSAGE" value="lombok" />
   </component>
 </project>

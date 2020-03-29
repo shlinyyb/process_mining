@@ -1,5 +1,8 @@
 package entity;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.List;
 
 /**
@@ -7,6 +10,8 @@ import java.util.List;
  * @Author: Kobe
  * @Date: 2020/3/20 12:35
  */
+@Getter
+@Setter
 public class LogDemo {
     /**
      * 方法的完整描述
@@ -28,7 +33,7 @@ public class LogDemo {
      */
     public String funcThread;
 
-    /**
+     /**
      * 通信资源
      */
     private String resource;
