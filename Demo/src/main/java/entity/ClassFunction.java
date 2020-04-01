@@ -13,7 +13,7 @@ import java.util.List;
 @Getter
 @Setter
 public class ClassFunction {
-    String authority;
+    Integer authority;
     String returnType;
     String functionName;
     List<ClassAttribute> funcAttrs;

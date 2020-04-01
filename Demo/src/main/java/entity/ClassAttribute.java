@@ -11,15 +11,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class ClassAttribute {
-    private String authority;
+    private int authority;
     private String returnType;
     private String attributeName;
-
-    public ClassAttribute(String authority, String returnType, String attributeName) {
-        this.authority = authority;
-        this.returnType = returnType;
-        this.attributeName = attributeName;
-    }
-
-
 }

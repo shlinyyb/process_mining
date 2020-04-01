@@ -1,5 +1,6 @@
 package entity;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -13,14 +14,10 @@ import java.util.List;
  */
 @Getter
 @Setter
+@EqualsAndHashCode
 public class ClassInfo {
     @NonNull
     private String className;
-
     private List<ClassFunction> functions;
     private List<ClassAttribute> attributes;
-
-    public ClassInfo(String className){
-        this.className = className;
-    }
 }

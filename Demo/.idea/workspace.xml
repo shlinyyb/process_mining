@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="stack解决事件挖掘问题">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassAttribute.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassAttribute.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,6 +39,8 @@
       <list>
         <option value="Arquillian JUnit Test Class" />
         <option value="Interface" />
+        <option value="Kotlin Enum" />
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -57,10 +59,11 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SCUT-Mall/code/scutmall" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -125,7 +128,10 @@
       <workItem from="1585103231757" duration="5707000" />
       <workItem from="1585210504427" duration="1130000" />
       <workItem from="1585277227920" duration="10887000" />
-      <workItem from="1585468608197" duration="3678000" />
+      <workItem from="1585468608197" duration="5118000" />
+      <workItem from="1585535768934" duration="12677000" />
+      <workItem from="1585562169461" duration="91000" />
+      <workItem from="1585624820056" duration="18706000" />
     </task>
     <task id="LOCAL-00001" summary="工具类">
       <created>1584801317309</created>
@@ -141,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584948100755</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="stack解决事件挖掘问题">
+      <created>1585472391493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1585472391493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,6 +176,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="工具类" />
     <MESSAGE value="lombok" />
-    <option name="LAST_COMMIT_MESSAGE" value="lombok" />
+    <MESSAGE value="stack解决事件挖掘问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="stack解决事件挖掘问题" />
   </component>
 </project>

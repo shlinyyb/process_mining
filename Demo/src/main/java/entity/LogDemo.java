@@ -14,9 +14,14 @@ import java.util.List;
 @Setter
 public class LogDemo {
     /**
+     * 方法运行所在节点
+     */
+    private String node;
+
+    /**
      * 方法的完整描述
      */
-    private String funcDes;
+    private List<ClassFunction> funcDes;
 
     /**
      * 方法执行状态
@@ -51,7 +56,7 @@ public class LogDemo {
     /**
      * 接口
      */
-    private String interfaces;
+    private List<String> interfaces;
 
     /**
      * 类的所有属性

@@ -1,8 +1,9 @@
 package utils;
 
+import entity.*;
+
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Description: 日志读取初始化类
@@ -31,5 +32,109 @@ public class LogUtil {
 
         return logDemoStrings;
 
+    }
+
+    /**
+     * 切割属性
+     */
+    private static List<ClassAttribute> getAttr(String attrString) {
+        List<ClassAttribute> classAttributes = new ArrayList<>();
+
+        //处理为null的情况
+        if (StringUtil.isMeaningLess(attrString)) {
+            return classAttributes;
+        }
+
+        String[] attribute = attrString.split(";");
+
+        for (String s : attribute) {
+            String[] tokens = s.split("\\?");
+            if (tokens.length != 3) {
+                break;
+            }
+            ClassAttribute classAttribute = new ClassAttribute();
+            classAttribute.setAuthority(Integer.parseInt(tokens[0]));
+            classAttribute.setReturnType(tokens[1]);
+            classAttribute.setAttributeName(tokens[2]);
+            classAttributes.add(classAttribute);
+        }
+
+        return classAttributes;
+    }
+
+    /**
+     * 切割方法
+     */
+    private static List<ClassFunction> getFunc(String funcString){
+        List<ClassFunction> classFunctionList = new ArrayList<>();
+
+        String[] funcStrings = funcString.split(";");
+        // 此处有空指针风险
+        // 还是得补Null
+        for (String token : funcStrings){
+            String[] tokens = token.split("\\?");
+            if (tokens.length != 4){
+                return classFunctionList;
+            }
+
+            ClassFunction classFunction = new ClassFunction();
+            classFunction.setAuthority(Integer.parseInt(tokens[0]));
+            classFunction.setReturnType(tokens[1]);
+            classFunction.setFunctionName(tokens[2]);
+
+            String[] attribute = tokens[3].split(",");
+            List<ClassAttribute> classAttributeList = new ArrayList<>();
+
+            for (String s : attribute) {
+                String[] attrToken = s.split(":");
+                if (attrToken.length != 2){
+                    break;
+                }
+                ClassAttribute classAttribute = new ClassAttribute();
+                classAttribute.setAuthority(Authority.DEFAULT_AUTHORITY.statusCode);
+                classAttribute.setReturnType(attrToken[0]);
+                classAttribute.setAttributeName(attrToken[1]);
+                classAttributeList.add(classAttribute);
+            }
+            classFunction.setFuncAttrs(classAttributeList);
+        }
+        return classFunctionList;
+    }
+
+    /**
+     * 实例化日志
+     */
+    public static List<LogDemo> instantiate(List<String> rawdata)  {
+        //List<List> lists = new ArrayList<>();
+        List<LogDemo> logDemoList = new ArrayList<>();
+        //Set<ClassInfo> classInfoSet = new HashSet<>();
+        for (String rawLog : rawdata) {
+            String[] tokens = rawLog.split("\\|");
+            //日志格式校验
+            if (tokens.length != 11) {
+                break;
+            }
+            LogDemo logDemo = new LogDemo();
+            ClassInfo classInfo = new ClassInfo();
+            logDemo.setNode(tokens[0]);
+            logDemo.setFuncDes(getFunc(tokens[1]));
+            //classInfo.setFunctions(getFunc(tokens[1]));
+            logDemo.setStatus(tokens[2]);
+            logDemo.setTimeStamp(tokens[3]);
+            logDemo.setFuncThread(tokens[4]);
+            logDemo.setResource(tokens[5]);
+            logDemo.setClassName(tokens[6]);
+            //classInfo.setClassName(tokens[6]);
+            logDemo.setSuperClass(tokens[7]);
+            logDemo.setInterfaces(Arrays.asList(tokens[8].split(";")));
+            logDemo.setAllAttributes(getAttr(tokens[9]));
+            //classInfo.setAttributes(getAttr(tokens[9]));
+
+            logDemoList.add(logDemo);
+            //classInfoSet.add(classInfo);
+        }
+        //lists.add(logDemoList);
+        //lists.add(Arrays.asList(classInfoSet.toArray()));
+        return logDemoList;
     }
 }

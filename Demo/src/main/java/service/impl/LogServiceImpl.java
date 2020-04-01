@@ -1,7 +1,10 @@
 package service.impl;
 
 import entity.LogDemo;
+import entity.RelationEnum;
+import entity.result.RelationMap;
 import service.process.LogService;
+import utils.StringUtil;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -38,16 +41,36 @@ public class LogServiceImpl implements LogService {
 
         int start = 2;
 
-        while (start < logDemoList.size() - 1) {
+        while (start < logDemoList.size()) {
             if (logDemoList.get(start).getStatus().equalsIgnoreCase("start")) {
                 logDemoStack.push(logDemoList.get(start));
             } else {
                 logDemoStack.pop();
-                callMap.put(logDemoStack.peek().getClassName(), logDemoList.get(start).getClassName());
+                // 注意对递归的处理
+                if (!logDemoStack.peek().getClassName().equalsIgnoreCase(logDemoList.get(start).getClassName())) {
+                    callMap.put(logDemoStack.peek().getClassName(), logDemoList.get(start).getClassName());
+                }
             }
             start++;
         }
 
         return callMap;
+    }
+
+    @Override
+    public List<RelationMap> processInherit(List<LogDemo> logDemoList) {
+        List<RelationMap> relationMapList = new ArrayList<>();
+
+        for (LogDemo logDemo : logDemoList) {
+            if (!StringUtil.isMeaningLess(logDemo.getSuperClass())){
+                RelationMap relationMap = new RelationMap();
+                relationMap.setFirstClass(logDemo.getClassName());
+                relationMap.setSecondClass(logDemo.getSuperClass());
+                relationMap.setRelationCode(RelationEnum.RELATED.getRelationCode());
+                relationMapList.add(relationMap);
+            }
+        }
+
+        return relationMapList;
     }
 }
