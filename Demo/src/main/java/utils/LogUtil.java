@@ -20,7 +20,7 @@ public class LogUtil {
                 InputStreamReader inputStreamReader = new InputStreamReader(
                         new FileInputStream(file), encode);
                 BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String lineTxt = null;
+                String lineTxt;
 
                 while ((lineTxt = bufferedReader.readLine()) != null) {
                     logDemoStrings.add(lineTxt);
@@ -105,9 +105,7 @@ public class LogUtil {
      * 实例化日志
      */
     public static List<LogDemo> instantiate(List<String> rawdata)  {
-        //List<List> lists = new ArrayList<>();
         List<LogDemo> logDemoList = new ArrayList<>();
-        //Set<ClassInfo> classInfoSet = new HashSet<>();
         for (String rawLog : rawdata) {
             String[] tokens = rawLog.split("\\|");
             //日志格式校验
@@ -115,26 +113,19 @@ public class LogUtil {
                 break;
             }
             LogDemo logDemo = new LogDemo();
-            ClassInfo classInfo = new ClassInfo();
             logDemo.setNode(tokens[0]);
             logDemo.setFuncDes(getFunc(tokens[1]));
-            //classInfo.setFunctions(getFunc(tokens[1]));
             logDemo.setStatus(tokens[2]);
             logDemo.setTimeStamp(tokens[3]);
             logDemo.setFuncThread(tokens[4]);
             logDemo.setResource(tokens[5]);
             logDemo.setClassName(tokens[6]);
-            //classInfo.setClassName(tokens[6]);
             logDemo.setSuperClass(tokens[7]);
             logDemo.setInterfaces(Arrays.asList(tokens[8].split(";")));
             logDemo.setAllAttributes(getAttr(tokens[9]));
-            //classInfo.setAttributes(getAttr(tokens[9]));
 
             logDemoList.add(logDemo);
-            //classInfoSet.add(classInfo);
         }
-        //lists.add(logDemoList);
-        //lists.add(Arrays.asList(classInfoSet.toArray()));
         return logDemoList;
     }
 }

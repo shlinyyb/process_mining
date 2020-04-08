@@ -5,6 +5,7 @@ import entity.result.RelationMap;
 
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 public interface LogService {
     /**
@@ -22,10 +23,10 @@ public interface LogService {
      * @param logDemoList
      * @return
      */
-    public Map<String, String> processLog(List<LogDemo> logDemoList);
+    public Set<Map.Entry<String, String>> processLog(List<LogDemo> logDemoList);
 
     /**
-     * 挖掘存在的继承关系
+     * 挖掘存在的继承/实现关系
      * @param logDemoList
      * @return
      */

@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Description:
+ * @Description: 暂时弃用
  * @Author: Kobe
  * @Date: 2020/3/20 13:05
  */

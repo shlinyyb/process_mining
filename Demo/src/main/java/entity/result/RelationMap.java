@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 /**
- * @Description:
+ * @Description: 记录first对second的关系
  * @Author: Kobe
  * @Date: 2020/3/30 16:46
  */

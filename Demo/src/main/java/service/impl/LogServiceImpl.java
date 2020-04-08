@@ -21,7 +21,7 @@ public class LogServiceImpl implements LogService {
     }
 
     @Override
-    public Map<String, String> processLog(List<LogDemo> logDemoList) {
+    public Set<Map.Entry<String, String>> processLog(List<LogDemo> logDemoList) {
         //输入日志长度校验
         if (logDemoList.size() == 0 || logDemoList.size() == 2 || logDemoList.size() % 2 == 0) {
             return null;
@@ -32,7 +32,7 @@ public class LogServiceImpl implements LogService {
         logDemoList = logDemoList.stream().sorted((o1, o2) -> (int) (Long.parseLong(o1.getTimeStamp()) - Long.parseLong(o2.getTimeStamp()))).collect(Collectors.toList());
 
         // 保存调用关系
-        Map<String, String> callMap = new HashMap<>();
+        Set<Map.Entry<String, String>> entryList = new HashSet<>();
 
 
         Stack<LogDemo> logDemoStack = new Stack<>();
@@ -48,13 +48,15 @@ public class LogServiceImpl implements LogService {
                 logDemoStack.pop();
                 // 注意对递归的处理
                 if (!logDemoStack.peek().getClassName().equalsIgnoreCase(logDemoList.get(start).getClassName())) {
-                    callMap.put(logDemoStack.peek().getClassName(), logDemoList.get(start).getClassName());
+//                    callMap.put(logDemoStack.peek().getClassName(), logDemoList.get(start).getClassName());
+                    Map.Entry<String, String> entry = new AbstractMap.SimpleEntry<>(logDemoStack.peek().getClassName(), logDemoList.get(start).getClassName());
+                    entryList.add(entry);
                 }
             }
             start++;
         }
 
-        return callMap;
+        return entryList;
     }
 
     @Override
@@ -66,8 +68,19 @@ public class LogServiceImpl implements LogService {
                 RelationMap relationMap = new RelationMap();
                 relationMap.setFirstClass(logDemo.getClassName());
                 relationMap.setSecondClass(logDemo.getSuperClass());
-                relationMap.setRelationCode(RelationEnum.RELATED.getRelationCode());
+                relationMap.setRelationCode(RelationEnum.INHERIT.getRelationCode());
                 relationMapList.add(relationMap);
+            }
+
+            // 实现关系挖掘
+            if (!logDemo.getInterfaces().isEmpty()){
+                for (String tempInterface : logDemo.getInterfaces()){
+                    RelationMap relationMap = new RelationMap();
+                    relationMap.setFirstClass(logDemo.getClassName());
+                    relationMap.setSecondClass(tempInterface);
+                    relationMap.setRelationCode(RelationEnum.IMPL.getRelationCode());
+                    relationMapList.add(relationMap);
+                }
             }
         }
 

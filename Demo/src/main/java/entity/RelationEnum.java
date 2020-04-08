@@ -7,7 +7,8 @@ public enum RelationEnum {
     INHERIT("inherit", 1),
     DEPEND("depend", 2),
     RELATED("related", 3),
-    AGGR("aggregation", 4);
+    AGGR("aggregation", 4),
+    IMPL("implement", 5);
 
     private String relation;
     private Integer relationCode;
