@@ -1,23 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="增加判定">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/RelationEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/RelationEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/event/EventNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/ClassAttribute.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/ClassFunction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/ClassInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/LogDemo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/entity/event/EventNode.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/LogUtil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/StringUtil.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +129,7 @@
       <workItem from="1585883298828" duration="726000" />
       <workItem from="1585902853534" duration="1974000" />
       <workItem from="1586072645305" duration="6996000" />
-      <workItem from="1586142713181" duration="13763000" />
+      <workItem from="1586142713181" duration="16933000" />
     </task>
     <task id="LOCAL-00001" summary="工具类">
       <created>1584801317309</created>
@@ -174,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585732003144</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="增加判定">
+      <created>1586325666084</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586325666084</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +190,7 @@
     <MESSAGE value="lombok" />
     <MESSAGE value="stack解决事件挖掘问题" />
     <MESSAGE value="日志输入处理" />
-    <option name="LAST_COMMIT_MESSAGE" value="日志输入处理" />
+    <MESSAGE value="增加判定" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加判定" />
   </component>
 </project>
