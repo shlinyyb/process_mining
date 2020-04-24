@@ -14,10 +14,33 @@ import java.util.List;
  */
 @Getter
 @Setter
-@EqualsAndHashCode
 public class ClassInfo {
     @NonNull
     private String className;
     private List<ClassFunction> functions;
     private List<ClassAttribute> attributes;
+
+    @Override
+    public boolean equals(Object object){
+        if (this == object){
+            return true;
+        }
+
+        if (object == null){
+            return false;
+        }
+
+        if (object instanceof ClassInfo){
+            ClassInfo classInfo = (ClassInfo) object;
+
+            return classInfo.getClassName().equalsIgnoreCase(this.className);
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode(){
+        return className.hashCode();
+    }
 }

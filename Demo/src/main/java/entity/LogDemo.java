@@ -14,11 +14,6 @@ import java.util.List;
 @Setter
 public class LogDemo {
     /**
-     * 方法运行所在节点
-     */
-    private String node;
-
-    /**
      * 方法的完整描述
      */
     private List<ClassFunction> funcDes;
@@ -33,15 +28,9 @@ public class LogDemo {
      */
     private String timeStamp;
 
-    /**
-     * 执行方法的线程
-     */
-    public String funcThread;
+    //public String funcThread;
 
-     /**
-     * 通信资源
-     */
-    private String resource;
+    // private String resource;
 
     /**
      * 类名称
@@ -62,4 +51,9 @@ public class LogDemo {
      * 类的所有属性
      */
     private List<ClassAttribute> allAttributes;
+
+    /**
+     * 当前运行方法
+     */
+    private String nowFunction;
 }

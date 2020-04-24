@@ -11,8 +11,10 @@ import java.util.*;
  * @Date: 2020/3/20 17:04
  */
 public class LogUtil {
+    // public static final
+
     public static List<String> readLogFile(String filePath, String encode) {
-        List<String> logDemoStrings = new ArrayList<String>();
+        List<String> logDemoStrings = new ArrayList<>();
 
         try {
             File file = new File(filePath);
@@ -41,7 +43,7 @@ public class LogUtil {
         List<ClassAttribute> classAttributes = new ArrayList<>();
 
         //处理为null的情况
-        if (StringUtil.isMeaningLess(attrString)) {
+        if (!StringUtil.isMeaningLess(attrString)) {
             return classAttributes;
         }
 
@@ -65,15 +67,15 @@ public class LogUtil {
     /**
      * 切割方法
      */
-    private static List<ClassFunction> getFunc(String funcString){
+    private static List<ClassFunction> getFunc(String funcString) {
         List<ClassFunction> classFunctionList = new ArrayList<>();
 
         String[] funcStrings = funcString.split(";");
         // 此处有空指针风险
         // 还是得补Null
-        for (String token : funcStrings){
+        for (String token : funcStrings) {
             String[] tokens = token.split("\\?");
-            if (tokens.length != 4){
+            if (tokens.length != 4) {
                 return classFunctionList;
             }
 
@@ -87,7 +89,7 @@ public class LogUtil {
 
             for (String s : attribute) {
                 String[] attrToken = s.split(":");
-                if (attrToken.length != 2){
+                if (attrToken.length != 2) {
                     break;
                 }
                 ClassAttribute classAttribute = new ClassAttribute();
@@ -97,32 +99,42 @@ public class LogUtil {
                 classAttributeList.add(classAttribute);
             }
             classFunction.setFuncAttrs(classAttributeList);
+            classFunctionList.add(classFunction);
         }
         return classFunctionList;
     }
 
     /**
-     * 实例化日志
+     * 获取类名
      */
-    public static List<LogDemo> instantiate(List<String> rawdata)  {
-        List<LogDemo> logDemoList = new ArrayList<>();
-        for (String rawLog : rawdata) {
-            String[] tokens = rawLog.split("\\|");
-            //日志格式校验
-            if (tokens.length != 11) {
+    private static String getClassName(String funcString) {
+        int location = 0;
+        for (int i = funcString.length() - 1; i > 0; i--) {
+            if (funcString.charAt(i) == '(') {
+                location = i;
                 break;
             }
+        }
+        return funcString.substring(0, location - 1);
+    }
+
+    /**
+     * 实例化日志
+     */
+    public static List<LogDemo> instantiate(List<String> rawData) {
+        List<LogDemo> logDemoList = new ArrayList<>();
+        for (String rawLog : rawData) {
+            rawLog = rawLog.replace(" ","");
+            String[] tokens = rawLog.split("\\|");
             LogDemo logDemo = new LogDemo();
-            logDemo.setNode(tokens[0]);
-            logDemo.setFuncDes(getFunc(tokens[1]));
-            logDemo.setStatus(tokens[2]);
-            logDemo.setTimeStamp(tokens[3]);
-            logDemo.setFuncThread(tokens[4]);
-            logDemo.setResource(tokens[5]);
-            logDemo.setClassName(tokens[6]);
-            logDemo.setSuperClass(tokens[7]);
-            logDemo.setInterfaces(Arrays.asList(tokens[8].split(";")));
-            logDemo.setAllAttributes(getAttr(tokens[9]));
+            logDemo.setNowFunction(tokens[3]);
+            logDemo.setFuncDes(getFunc(tokens[11]));
+            logDemo.setStatus(tokens[4]);
+            logDemo.setTimeStamp(tokens[5]);
+            logDemo.setClassName(tokens[13]);
+            logDemo.setSuperClass(tokens[8]);
+            logDemo.setInterfaces(Arrays.asList(tokens[9].split(";")));
+            logDemo.setAllAttributes(getAttr(tokens[10]));
 
             logDemoList.add(logDemo);
         }

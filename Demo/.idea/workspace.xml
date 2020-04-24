@@ -1,8 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="增加判定">
+    <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/entity/TestLombok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/entity/TestLombok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/entity/TestLombok.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/entity/TestLombok.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +61,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SCUT-Mall/code/scutmall" />
+    <property name="last_opened_file_path" value="D:/Process_Mining/test_demo" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -64,6 +74,9 @@
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitHub\process_mining\Demo\src\main\resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -78,7 +91,46 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.AppMain">
+    <configuration name="AppMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AppMain" />
+      <module name="Demo" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestEquals.testEqual" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="entity" />
+      <option name="MAIN_CLASS_NAME" value="entity.TestEquals" />
+      <option name="METHOD_NAME" value="testEqual" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestJson.toJson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="entity.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="entity" />
+      <option name="MAIN_CLASS_NAME" value="entity.TestJson" />
+      <option name="METHOD_NAME" value="toJson" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestLombok.testGetAndSet" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Demo" />
       <extension name="coverage">
@@ -97,6 +149,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.AppMain" />
+        <item itemvalue="JUnit.TestJson.toJson" />
+        <item itemvalue="JUnit.TestEquals.testEqual" />
         <item itemvalue="JUnit.TestLombok.testGetAndSet" />
       </list>
     </recent_temporary>
@@ -129,7 +184,17 @@
       <workItem from="1585883298828" duration="726000" />
       <workItem from="1585902853534" duration="1974000" />
       <workItem from="1586072645305" duration="6996000" />
-      <workItem from="1586142713181" duration="16933000" />
+      <workItem from="1586142713181" duration="17810000" />
+      <workItem from="1586422401767" duration="10625000" />
+      <workItem from="1586682387370" duration="23697000" />
+      <workItem from="1586962759514" duration="22000" />
+      <workItem from="1587004317088" duration="2225000" />
+      <workItem from="1587008648952" duration="162000" />
+      <workItem from="1587008838364" duration="1530000" />
+      <workItem from="1587029698894" duration="1236000" />
+      <workItem from="1587115735921" duration="3721000" />
+      <workItem from="1587176414080" duration="1888000" />
+      <workItem from="1587262741926" duration="8667000" />
     </task>
     <task id="LOCAL-00001" summary="工具类">
       <created>1584801317309</created>
@@ -166,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1586325666084</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="git ignore 文件">
+      <created>1586335396201</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586335396201</updated>
+    </task>
+    <task id="LOCAL-00007" summary="增加判定">
+      <created>1586335424044</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586335424044</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +269,45 @@
     <MESSAGE value="lombok" />
     <MESSAGE value="stack解决事件挖掘问题" />
     <MESSAGE value="日志输入处理" />
+    <MESSAGE value="git ignore 文件" />
     <MESSAGE value="增加判定" />
     <option name="LAST_COMMIT_MESSAGE" value="增加判定" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
+          <line>98</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java</url>
+          <line>61</line>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
+          <line>102</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="relationList.get(5)" />
+        <watch expression="relationList" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
