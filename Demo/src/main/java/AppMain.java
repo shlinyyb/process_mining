@@ -54,14 +54,13 @@ public class AppMain {
 
         /*
          * 最终的目标为输出relationMap
-         *
          */
         for (Map.Entry<CallMap, CallMap> callEntry : callMap) {
             boolean isInherit = false;
             String firstFunc = callEntry.getKey().getFunction();
-            firstFunc = firstFunc.substring(0, firstFunc.length() - 2);
+            firstFunc = LogUtil.getClassName(firstFunc);
             String secondFunc = callEntry.getValue().getFunction();
-            secondFunc = secondFunc.substring(0, secondFunc.length() - 2);
+            secondFunc = LogUtil.getClassName(secondFunc);
             // 先已知继承关系
             for (RelationMap temp : relationList) {
                 if (temp.getFirstClass().equalsIgnoreCase(firstFunc) && temp.getSecondClass().equalsIgnoreCase(secondFunc)
@@ -70,7 +69,21 @@ public class AppMain {
                     break;
                 }
             }
+
+            // 判断聚合关系
+            boolean isAggr = false;
             if (!isInherit) {
+                if (callEntry.getKey().getClassName().equalsIgnoreCase(firstFunc) && callEntry.getValue().getClassName().equalsIgnoreCase(secondFunc)) {
+                    RelationMap relationMap = new RelationMap();
+                    relationMap.setFirstClass(callEntry.getKey().getClassName());
+                    relationMap.setSecondClass(callEntry.getValue().getClassName());
+                    relationMap.setRelationCode(RelationEnum.AGGR.getRelationCode());
+                    relationList.add(relationMap);
+                    isAggr = true;
+                }
+            }
+
+            if (!isInherit && !isAggr) {
                 ClassInfo firstClass = classInfoHashMap.get(callEntry.getKey().getClassName());
                 ClassInfo secondClass = classInfoHashMap.get(callEntry.getValue().getClassName());
 

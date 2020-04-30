@@ -22,10 +22,10 @@ public class LogServiceImpl implements LogService {
     @Override
     public Set<Map.Entry<CallMap, CallMap>> processLog(List<LogDemo> logDemoList) {
         //输入日志长度校验
-//        if (logDemoList.size() == 0 || logDemoList.size() == 2 || logDemoList.size() % 2 == 0) {
-//            System.out.println("日志长度有问题");
-//            return null;
-//        }
+        if (logDemoList.size() == 0 || logDemoList.size() % 2 != 0) {
+            System.out.println("日志长度有问题");
+            return null;
+        }
 
         // 保存调用关系
         Set<Map.Entry<CallMap, CallMap>> entryList = new HashSet<>();

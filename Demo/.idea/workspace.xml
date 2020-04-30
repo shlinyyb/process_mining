@@ -3,16 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd3160e0-9e61-408b-a717-7c04da2732ce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/AppMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AppMain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ClassInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/LogDemo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/result/RelationMap.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/process/LogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utils/LogUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/entity/TestLombok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/entity/TestLombok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/entity/TestLombok.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/entity/TestLombok.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +54,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="Arquillian JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.Arquillian JUnit4" value="" />
-    <property name="last_opened_file_path" value="D:/Process_Mining/test_demo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -194,7 +187,9 @@
       <workItem from="1587029698894" duration="1236000" />
       <workItem from="1587115735921" duration="3721000" />
       <workItem from="1587176414080" duration="1888000" />
-      <workItem from="1587262741926" duration="8667000" />
+      <workItem from="1587262741926" duration="9605000" />
+      <workItem from="1587826121939" duration="1767000" />
+      <workItem from="1588133640977" duration="9630000" />
     </task>
     <task id="LOCAL-00001" summary="工具类">
       <created>1584801317309</created>
@@ -245,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586335424044</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="增加判定">
+      <created>1587696108033</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587696108033</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -278,27 +280,27 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java</url>
-          <line>31</line>
+          <line>30</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
-          <line>98</line>
+          <line>111</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/service/impl/LogServiceImpl.java</url>
-          <line>61</line>
+          <line>60</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
-          <line>102</line>
+          <line>115</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/AppMain.java</url>
-          <line>58</line>
+          <line>57</line>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>

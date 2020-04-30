@@ -11,8 +11,6 @@ import java.util.*;
  * @Date: 2020/3/20 17:04
  */
 public class LogUtil {
-    // public static final
-
     public static List<String> readLogFile(String filePath, String encode) {
         List<String> logDemoStrings = new ArrayList<>();
 
@@ -75,18 +73,21 @@ public class LogUtil {
         // 还是得补Null
         for (String token : funcStrings) {
             String[] tokens = token.split("\\?");
-            if (tokens.length != 4) {
-                return classFunctionList;
-            }
-
+            // 增加对构造函数的兼容
             ClassFunction classFunction = new ClassFunction();
-            classFunction.setAuthority(Integer.parseInt(tokens[0]));
-            classFunction.setReturnType(tokens[1]);
-            classFunction.setFunctionName(tokens[2]);
-
-            String[] attribute = tokens[3].split(",");
             List<ClassAttribute> classAttributeList = new ArrayList<>();
-
+            String[] attribute;
+            if(tokens.length == 4) {
+                classFunction.setAuthority(Integer.parseInt(tokens[0]));
+                classFunction.setReturnType(tokens[1]);
+                classFunction.setFunctionName(tokens[2]);
+                attribute = tokens[3].split(",");
+            } else {
+                classFunction.setAuthority(Integer.parseInt(tokens[0]));
+                classFunction.setReturnType("construct");
+                classFunction.setFunctionName(tokens[1]);
+                attribute = tokens[2].split(",");
+            }
             for (String s : attribute) {
                 String[] attrToken = s.split(":");
                 if (attrToken.length != 2) {
@@ -107,7 +108,7 @@ public class LogUtil {
     /**
      * 获取类名
      */
-    private static String getClassName(String funcString) {
+    public static String getClassName(String funcString) {
         int location = 0;
         for (int i = funcString.length() - 1; i > 0; i--) {
             if (funcString.charAt(i) == '(') {
